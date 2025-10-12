@@ -10,6 +10,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         /* --- 1. General Styling & Variables --- */
+        .project-footer {
+    background-color: #131313; /* fundal deschis */
+
+    padding: 20px 25px;
+    font-family: Arial, sans-serif;
+    color: #797979;
+    text-align: left;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+    border-radius: 5px 5px 0 0;
+    margin-top: 40px;
+}
+
+.project-footer h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.4em;
+}
+
+.project-footer p {
+    margin: 5px 0;
+    line-height: 1.5;
+    color: #7e7e7e;
+}
+
+.project-footer b {
+    color: #929292;
+}
+
         :root {
             --bg-color: #121212;
             --surface-color: #1e1e1e;
@@ -455,35 +483,47 @@
             transform: scale(1.05);
         }
 
-        .region.central {
-            grid-column: 2;
-            grid-row: 1 / span 2;
-        }
+.region.west {
+    grid-column: 1;
+    grid-row: 1;
+}
 
-        .region.north {
-            grid-column: 2;
-            grid-row: 1;
-            align-self: start;
-            height: 50%;
-        }
+.region.north {
+    grid-column: 2;
+    grid-row: 1;
+}
 
-        .region.north-east {
-            grid-column: 3;
-            grid-row: 1;
-        }
+.region.north-east {
+    grid-column: 3;
+    grid-row: 1;
+}
 
-        .region.east {
-            grid-column: 3;
-            grid-row: 2;
-        }
+.region.central {
+    grid-column: 1 / span 2; /* ocupă 2 coloane */
+    grid-row: 2;
+}
 
-        .region.west {
-            grid-column: 1;
-            grid-row: 1 / span 2;
-        }
+.region.east {
+    grid-column: 3;
+    grid-row: 2;
+}
+@media (max-width: 600px) {
+    .singapore-map-regions {
+        display: flex;
+        flex-direction: column;
+        height: auto; /* se ajustează înălțimea */
+    }
 
+    .region {
+        width: 100%;
+        height: 60px; /* înălțime uniformă pentru fiecare regiune */
+        margin-bottom: 5px; /* spațiu între regiuni */
+        grid-column: auto;
+        grid-row: auto;
+    }
+}
         .text-center {
-            text-align: center;
+            /*text-align: center;*/
         }
 
         /* Rights & Freedoms Section */
@@ -835,7 +875,12 @@
             </ul>
         </nav>
     </header>
-
+                <style>
+                    .tabbed {
+                        text-indent: 2em;
+                        text-align: justify;
+                    }
+                </style>
     <main>
         <section id="introducere">
             <div class="container">
@@ -852,8 +897,14 @@
 		   <img src="https://ro.maps-singapore.com/img/1200/singapore-pe-harta.jpg" class="animate-on-scroll" style="width: 100%; max-width: 600px; border-radius: 10px;">    
                 </div>
 
-                <p class="text-center animate-on-scroll">
-                    „Singapore este un stat situat în Asia de Sud-Est, format dintr-o insulă principală și mai multe insulițe. Este un oraș-stat modern, extrem de organizat și dezvoltat. Capitala este tot Singapore, suprafața fiindu-i relativ mică — aproximativ 728 km² — iar populația este de circa 5,6 milioane de locuitori. Singapore este un stat independent, suveran și unitar."
+                <p class="text-center animate-on-scroll tabbed">
+                    Singapore este un stat situat în Asia de Sud-Est, alcătuit dintr-o insulă principală și mai multe insulițe mai mici. Deși are o suprafață modestă, aproximativ 728 km², țara impresionează prin densitatea populației și nivelul ridicat de dezvoltare, găzduind peste 5,6 milioane de locuitori.
+                </p>
+                <p class="text-center animate-on-scroll tabbed">
+                    Este un oraș-stat modern și organizat, cunoscut pentru infrastructura sa avansată, curățenie și disciplină socială. După obținerea independenței în 1965, Singapore s-a transformat rapid într-unul dintre cele mai importante centre economice și financiare din Asia.
+                </p>
+                <p class="text-center animate-on-scroll tabbed">
+                  Astăzi, este considerat un model de eficiență și inovație, combinând tradițiile asiatice cu influențe moderne și un sistem guvernamental stabil. Prin echilibrul său între dezvoltare urbană și respect pentru ordine, Singapore este adesea numit „orașul viitorului”.
                 </p>
 
                 <div class="info-cards animate-on-scroll" style="margin-top: 3rem; width: 100%; max-width: 800px;">
@@ -882,11 +933,14 @@
 
                 </div>
 
-                <p class="text-center animate-on-scroll">
-                    „Forma de guvernământ în Singapore este <b>republică parlamentară</b>. Șeful statului este președintele, ales prin vot direct pentru un mandat de șase ani, iar puterea executivă este exercitată de guvern, condus de prim-ministru. Acest sistem combină reprezentarea democratică cu o conducere stabilă și organizată."
-                </p>
-
-                <div class="governance-structure animate-on-scroll">
+                <p class="text-center animate-on-scroll tabbed">
+                    Singapore are o republică parlamentară, unde puterea este împărțită între președinte și guvern. Președintele, ales direct pentru șase ani, are roluri mai mult ceremoniale, dar poate interveni în chestiuni importante de finanțe sau securitate. Prim-ministrul conduce guvernul și coordonează implementarea politicilor, asigurând stabilitate și eficiență administrativă.
+               </p>
+               <p class="text-center animate-on-scroll tabbed">
+                    Sistemul combină democrația reprezentativă cu un cadru organizațional strict, ceea ce ajută Singapore să mențină atât dezvoltarea economică rapidă, cât și un nivel ridicat de ordine socială. În plus, partidele politice majore joacă un rol activ în consultarea publică, iar deciziile guvernamentale sunt adesea susținute de politici pe termen lung, orientate spre inovare și progres urban.
+               </p>            
+    <div class="governance-structure animate-on-scroll">
+                    
                     <div class="gov-level">
                         <h3>Președinte (Șef de Stat)</h3>
                     </div>
@@ -912,20 +966,25 @@
 
                 <div class="content-grid animate-on-scroll">
                     <div class="text-content">
-                        <p>„Singapore este un <b>stat unitar</b>: deciziile majore sunt luate la nivel central, nu există state federale sau regiuni autonome. Pentru gestionare urbană și planificare, teritoriul este împărțit în regiuni și districte (Central, East, North, North-East, West), dar acestea funcționează sub autoritatea guvernului central."</p>
+                        <p class="tabbed">
+                            Singapore este un stat unitar, ceea ce înseamnă că toate deciziile majore sunt centralizate și nu există state sau regiuni autonome. Pentru o gestionare eficientă a orașului și planificare urbană, teritoriul este împărțit în cinci regiuni principale: Central, East, North, North-East și West. Fiecare regiune include mai multe districte, dar toate se află sub autoritatea guvernului central, asigurând coerență în dezvoltare, infrastructură și servicii publice.
+
+Această organizare permite Singapore-ului să implementeze rapid proiecte urbanistice și politici sociale, menținând un nivel ridicat de ordine și eficiență în întreaga țară.
+                        
+                        </p>
                         
                         <!-- NEW: Image Placeholder -->
                         <div class="image-placeholder" style="max-width: 100%; margin-top: 2rem;">
                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Singapore%2C_administrative_divisions_-_de_-_colored.svg" class="animate-on-scroll" style="width: 100%; max-width: 600px; border-radius: 10px;"> 
                         </div>
                     </div>
-                    <div class="singapore-map-regions">
-                        <div class="region west">Vest</div>
-                        <div class="region north">Nord</div>
-                        <div class="region north-east">Nord-Est</div>
-                        <div class="region east">Est</div>
-                        <div class="region central">Central</div>
-                    </div>
+<div class="singapore-map-regions">
+    <a href="https://en.wikipedia.org/wiki/West_Region,_Singapore" target="_blank" class="region west">Vest</a>
+    <a href="https://en.wikipedia.org/wiki/North_Region,_Singapore" target="_blank" class="region north">Nord</a>
+    <a href="https://en.wikipedia.org/wiki/Northeast_Region,_Singapore" target="_blank" class="region north-east">Nord-Est</a>
+    <a href="https://en.wikipedia.org/wiki/Central_Region,_Singapore" target="_blank" class="region central">Central</a>
+    <a href="https://en.wikipedia.org/wiki/East_Region,_Singapore" target="_blank" class="region east">Sud-Est</a>
+</div>
                 </div>
             </div>
         </section>
@@ -945,8 +1004,10 @@
 			<img src="https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2025/08/30/e0098202-dc21-46a8-86c3-aae1772bc531_fe83fbf5.jpg?itok=hI0XMwxC&v=1756494053" class="animate-on-scroll" style="width: 100%; max-width: 600px; border-radius: 10px;"> 
                 </div>
 
-                <p class="text-center animate-on-scroll">
-                    „Politic, Singapore este o democrație cu un <b>partid dominant — People's Action Party (PAP)</b> — care conduce din momentul independenței. Alegerile sunt regulate, dar viața politică este marcată de accent pe meritocrație, stabilitate și guvernare eficientă. Sistemul pune accent pe ordine, dezvoltare economică și statul de drept."
+                <p class="text-center animate-on-scroll tabbed">
+             Singapore este o democrație cu un partid dominant, People's Action Party (PAP), aflat la conducere încă de la independența țării în 1965. Deși alegerile sunt regulate, viața politică este caracterizată de un accent puternic pe meritocrație, stabilitate și guvernare eficientă, ceea ce permite luarea rapidă a deciziilor și implementarea proiectelor pe termen lung.
+
+Sistemul pune accent pe ordine, dezvoltare economică și respectarea statului de drept, iar guvernul promovează politici care susțin educația, infrastructura și inovația. Această abordare a contribuit la transformarea Singapore-ului într-un stat modern, previzibil și sigur, unde cetățenii se pot baza pe servicii publice eficiente și o economie robustă.
                 </p>
             </div>
         </section>
@@ -961,9 +1022,12 @@
                     <span>Placeholder Video: Drepturi și Libertăți</span>
                 </div>
 
-                <p class="text-center animate-on-scroll">
-                    „Singapore oferă un nivel de trai ridicat, servicii publice bine organizate și un sistem judiciar eficient. Totodată, există reglementări stricte privind ordinea publică și media — acestea mențin stabilitatea, dar implică anumite restricții ale libertății de exprimare. De asemenea, legislația previne multă corupție și menține curățenia publică."
-                </p>
+                <p class="text-center animate-on-scroll tabbed">
+
+Singapore oferă un nivel de trai ridicat, cu servicii publice eficiente, infrastructură modernă și un sistem judiciar rapid și corect. Orașul-stat este renumit pentru curățenia publică, ordinea urbană și politicile anti-corupție, care fac viața cotidiană sigură și previzibilă pentru locuitori.
+
+Totodată, există reglementări stricte privind ordinea publică și mass-media. Acestea contribuie la stabilitatea socială, dar implică și anumite restricții ale libertății de exprimare. În ansamblu, societatea din Singapore combină siguranța, disciplina și eficiența administrativă cu un standard de viață ridicat, oferind un mediu urban modern și bine organizat.          
+      </p>
 
                 <div class="side-by-side animate-on-scroll">
                     <div class="card">
@@ -990,8 +1054,10 @@
                     <span>Placeholder Video: Concluzii</span>
                 </div>
 
-                <p class="text-center animate-on-scroll">
-                    „În concluzie, Singapore este un stat mic ca suprafață, dar mare ca performanță: un oraș-stat modern, cu economie puternică, infrastructură de top și politici de planificare urbană inteligente. Este cunoscut ca unul dintre „tigrii" din Asia pentru dezvoltarea sa rapidă și pentru aeroportul și portul de clasă mondială. Exemplul Singapore arată cum guvernarea eficientă poate genera prosperitate."
+                <p class="text-center animate-on-scroll tabbed">
+             În concluzie, Singapore este un stat mic ca suprafață, dar mare ca performanță. Este un oraș-stat modern, cu o economie puternică, infrastructură de top și politici de planificare urbană inteligente.
+
+Țara este recunoscută ca unul dintre „tigrii Asiei”, datorită creșterii economice rapide, aeroportului internațional de clasă mondială și portului strategic, care susțin comerțul global. Experiența Singapore-ului demonstrează cum o guvernare eficientă și planificată poate genera prosperitate, stabilitate socială și o calitate a vieții remarcabilă, chiar și într-un spațiu geografic restrâns.
                 </p>
 
                 <div class="gallery animate-on-scroll">
@@ -1033,7 +1099,17 @@
             </p>
         </div>
     </div>
+    
 </section>
+    <footer class="project-footer">
+    <h3>Informații proiect</h3>
+    <p><b>Instituția:</b> CEITI, Chișinău 2025</p>
+    <p><b>Grupa:</b> P-2332</p>
+    <p><b>Elaborat de:</b> Dan Albu-Oprea, Severina Tătaru, Guidea Aladin, Leșan Victor, Doglea Vlada, Luchian Gabriel</p>
+    <p><b>Verificat de:</b> Octavian Cucuta</p>
+</footer>
+
+
     </main>
 
     <script>
@@ -1111,6 +1187,10 @@
                 observer.observe(el);
             });
         });
+
     </script>
+
+
+
 </body>
 </html>
