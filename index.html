@@ -9,9 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        /* --- 1. General Styling & Variables --- */
+
         .project-footer {
-    background-color: #131313; /* fundal deschis */
+    background-color: #131313; 
 
     padding: 20px 25px;
     font-family: Arial, sans-serif;
@@ -113,7 +113,6 @@
             min-height: 80vh;
         }
 
-        /* --- 2. Landing Card & Background --- */
         #background-animation {
             position: fixed;
             top: 0;
@@ -210,7 +209,6 @@
             }
         }
 
-        /* --- 3. Navigation (Improved Responsive) --- */
         header {
             position: sticky;
             top: 0;
@@ -279,7 +277,6 @@
             width: 100%;
         }
 
-        /* Theme Toggle Button */
         .theme-toggle {
             background: none;
             border: 2px solid var(--border-color);
@@ -301,7 +298,6 @@
             transform: scale(1.05);
         }
 
-        /* Mobile Menu Toggle */
         .menu-toggle {
             display: none;
             background: none;
@@ -312,29 +308,36 @@
             padding: 0.5rem;
         }
 
-        /* --- 4. Content Sections & Animation --- */
-        .video-placeholder {
-            width: 100%;
-            max-width: 800px;
-            aspect-ratio: 16 / 9;
-            background-color: #000;
-            border: 2px dashed var(--border-color);
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 2rem 0;
-            color: var(--text-muted-color);
-        }
+.video-placeholder {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+  border: 2px dashed var(--border-color);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 2rem auto;
+  color: var(--text-muted-color);
+  transition: border-color 0.3s ease, border-style 0.3s ease;
+}
 
-        .video-placeholder i {
-            font-size: 4rem;
-            color: rgba(255, 255, 255, 0.5);
-            margin-bottom: 1rem;
-        }
+.video-placeholder.loaded {
+  border-color: transparent;
+  border-style: solid;
+}
 
-        /* Image Placeholders - NEW */
+.video-placeholder iframe {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  display: block;
+}
+
         .image-placeholder {
             width: 100%;
             max-width: 600px;
@@ -408,7 +411,6 @@
             color: var(--primary-color);
         }
 
-        /* Governance Section */
         .governance-structure {
             display: flex;
             flex-direction: column;
@@ -449,7 +451,6 @@
             content: '';
         }
 
-        /* Admin Section */
         .singapore-map-regions {
             position: relative;
             width: 100%;
@@ -499,7 +500,7 @@
 }
 
 .region.central {
-    grid-column: 1 / span 2; /* ocupă 2 coloane */
+    grid-column: 1 / span 2;
     grid-row: 2;
 }
 
@@ -511,22 +512,22 @@
     .singapore-map-regions {
         display: flex;
         flex-direction: column;
-        height: auto; /* se ajustează înălțimea */
+        height: auto; 
     }
 
     .region {
         width: 100%;
-        height: 60px; /* înălțime uniformă pentru fiecare regiune */
-        margin-bottom: 5px; /* spațiu între regiuni */
+        height: 60px;
+        margin-bottom: 5px; 
         grid-column: auto;
         grid-row: auto;
     }
 }
         .text-center {
-            /*text-align: center;*/
+
         }
 
-        /* Rights & Freedoms Section */
+
         .side-by-side {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -554,7 +555,7 @@
             margin-bottom: 1rem;
         }
 
-        /* Curiosities Section */
+
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -586,7 +587,6 @@
             transition: opacity 1s, transform 1s;
         }
 
-        /* Scroll Animation Classes */
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(30px);
@@ -598,7 +598,6 @@
             transform: translateY(0);
         }
 
-        /* --- 5. Responsiveness --- */
         @media (max-width: 968px) {
             nav {
                 padding: 1rem;
@@ -690,21 +689,21 @@
                 margin-top: 1rem;
             }
             nav li {
-                flex-basis: 30%; /* Better distribution */
+                flex-basis: 30%; 
                 text-align: center;
             }
             nav a {
                 font-size: 0.8rem;
             }
             #theme-toggle {
-                position: absolute; /* Fixed toggle position */
+                position: absolute;
                 top: 0.5rem;
                 right: 1rem;
             }
 
             .container {
                 padding: 3rem 1rem;
-                align-items: center; /* Center content */
+                align-items: center; 
             }
             .content-grid {
                 grid-template-columns: 1fr;
@@ -723,9 +722,9 @@
                 grid-template-columns: 1fr;
             }
             .singapore-map-regions {
-                 height: 300px; /* Kept fixed height but structure adapts */
+                 height: 300px;
             }
-            /* Center all content elements on mobile */
+
             p, .text-content, .card, .gallery-item, .governance-structure {
                 text-align: center;
                 margin-left: auto;
@@ -887,15 +886,21 @@
                 <div class="animate-on-scroll">
                     <h2>Introducere Generală</h2>
                 </div>
-                <div class="video-placeholder animate-on-scroll">
-                    <i class="fas fa-play-circle"></i>
-                    <span>Placeholder Video: Introducere</span>
-                </div>
+            <div class="video-placeholder animate-on-scroll">
+            <iframe
+                src="https://drive.google.com/file/d/1mv6fVTJqnkh85wW3c_NeYxgw6gt1dEt3/preview"
+                class="animate-on-scroll"
+                allow="autoplay; fullscreen"
+                allowfullscreen
+                loading="lazy"
+                onload="this.parentElement.classList.add('loaded');">
+            </iframe>
+            </div>
                 
-                <!-- NEW: Image Placeholder -->
+
                 <div class="image-placeholder animate-on-scroll">
 		   <img src="https://ro.maps-singapore.com/img/1200/singapore-pe-harta.jpg" class="animate-on-scroll" style="width: 100%; max-width: 600px; border-radius: 10px;">    
-                </div>
+                </div> 
 
                 <p class="text-center animate-on-scroll tabbed">
                     Singapore este un stat situat în Asia de Sud-Est, alcătuit dintr-o insulă principală și mai multe insulițe mai mici. Deși are o suprafață modestă, aproximativ 728 km², țara impresionează prin densitatea populației și nivelul ridicat de dezvoltare, găzduind peste 5,6 milioane de locuitori.
@@ -921,12 +926,18 @@
                 <div class="animate-on-scroll">
                     <h2>Forma de Guvernământ</h2>
                 </div>
-                <div class="video-placeholder animate-on-scroll">
-                    <i class="fas fa-play-circle"></i>
-                    <span>Placeholder Video: Forma de Guvernământ</span>
-                </div>
+            <div class="video-placeholder animate-on-scroll">
+            <iframe
+                src="https://drive.google.com/file/d/1Vs7zgi6UaV83BKvPDeAfZgSkL0bk7b0c/preview"
+                class="animate-on-scroll"
+                allow="autoplay; fullscreen"
+                allowfullscreen
+                loading="lazy"
+                onload="this.parentElement.classList.add('loaded');">
+            </iframe>
+            </div>
 
-                <!-- NEW: Image Placeholder -->
+
                 <div class="image-placeholder animate-on-scroll">
 
                     <img src="https://www.parliament.gov.sg/images/default-source/architecture-of-the-house/architecture-of-the-house-01.jpg?sfvrsn=1624408_6" class="animate-on-scroll" style="width: 100%; max-width: 600px; border-radius: 10px;"> 
@@ -959,11 +970,16 @@
                 <div class="animate-on-scroll">
                     <h2>Organizare Administrativ-Teritorială</h2>
                 </div>
-                <div class="video-placeholder animate-on-scroll">
-                    <i class="fas fa-play-circle"></i>
-                    <span>Placeholder Video: Organizare</span>
-                </div>
-
+            <div class="video-placeholder animate-on-scroll">
+            <iframe
+                src="https://drive.google.com/file/d/1HpDqpK0Sr5JgR1aTq1BFW-Z01WLEzVam/preview"
+                class="animate-on-scroll"
+                allow="autoplay; fullscreen"
+                allowfullscreen
+                loading="lazy"
+                onload="this.parentElement.classList.add('loaded');">
+            </iframe>
+            </div>
                 <div class="content-grid animate-on-scroll">
                     <div class="text-content">
                         <p class="tabbed">
@@ -973,7 +989,7 @@ Această organizare permite Singapore-ului să implementeze rapid proiecte urban
                         
                         </p>
                         
-                        <!-- NEW: Image Placeholder -->
+
                         <div class="image-placeholder" style="max-width: 100%; margin-top: 2rem;">
                            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Singapore%2C_administrative_divisions_-_de_-_colored.svg" class="animate-on-scroll" style="width: 100%; max-width: 600px; border-radius: 10px;"> 
                         </div>
@@ -994,12 +1010,17 @@ Această organizare permite Singapore-ului să implementeze rapid proiecte urban
                 <div class="animate-on-scroll">
                     <h2>Sistem Politic</h2>
                 </div>
-                <div class="video-placeholder animate-on-scroll">
-                    <i class="fas fa-play-circle"></i>
-                    <span>Placeholder Video: Sistem Politic</span>
-                </div>
+            <div class="video-placeholder animate-on-scroll">
+            <iframe
+                src="https://drive.google.com/file/d/1snks3voz-YMlLTqxt_9Osv059MkEwLT2/preview"
+                class="animate-on-scroll"
+                allow="autoplay; fullscreen"
+                allowfullscreen
+                loading="lazy"
+                onload="this.parentElement.classList.add('loaded');">
+            </iframe>
+            </div>
 
-                <!-- NEW: Image Placeholder -->
                 <div class="image-placeholder animate-on-scroll">
 			<img src="https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2025/08/30/e0098202-dc21-46a8-86c3-aae1772bc531_fe83fbf5.jpg?itok=hI0XMwxC&v=1756494053" class="animate-on-scroll" style="width: 100%; max-width: 600px; border-radius: 10px;"> 
                 </div>
@@ -1017,11 +1038,16 @@ Sistemul pune accent pe ordine, dezvoltare economică și respectarea statului d
                 <div class="animate-on-scroll">
                     <h2>Drepturi, Libertăți și Ordine Socială</h2>
                 </div>
-                <div class="video-placeholder animate-on-scroll">
-                    <i class="fas fa-play-circle"></i>
-                    <span>Placeholder Video: Drepturi și Libertăți</span>
-                </div>
-
+            <div class="video-placeholder animate-on-scroll">
+            <iframe
+                src="https://drive.google.com/file/d/1-uB30F2hXS2QKBPx7l_XRVXrMQ6v7wy7/preview"
+                class="animate-on-scroll"
+                allow="autoplay; fullscreen"
+                allowfullscreen
+                loading="lazy"
+                onload="this.parentElement.classList.add('loaded');">
+            </iframe>
+            </div>
                 <p class="text-center animate-on-scroll tabbed">
 
 Singapore oferă un nivel de trai ridicat, cu servicii publice eficiente, infrastructură modernă și un sistem judiciar rapid și corect. Orașul-stat este renumit pentru curățenia publică, ordinea urbană și politicile anti-corupție, care fac viața cotidiană sigură și previzibilă pentru locuitori.
@@ -1036,7 +1062,7 @@ Totodată, există reglementări stricte privind ordinea publică și mass-media
                         
                         
                     </div>
-<!-- NEW: Image Placeholder -->
+
                         <div class="image-placeholder" style="max-width: 100%; margin-top: 1.5rem;">
                             <img src="https://cdn.i-scmp.com/sites/default/files/styles/1020x680/public/d8/images/canvas/2025/05/23/36bd8293-5631-4360-89c3-677da99b827b_9b703ae4.jpg?itok=M9e2wRF8&v=1748007341" class="animate-on-scroll" style="width: 100%; max-width: 600px; border-radius: 10px;">
                         </div>
@@ -1049,11 +1075,16 @@ Totodată, există reglementări stricte privind ordinea publică și mass-media
                 <div class="animate-on-scroll">
                     <h2>Concluzii și Curiozități</h2>
                 </div>
-                <div class="video-placeholder animate-on-scroll">
-                    <i class="fas fa-play-circle"></i>
-                    <span>Placeholder Video: Concluzii</span>
-                </div>
-
+            <div class="video-placeholder animate-on-scroll">
+            <iframe
+                src="https://drive.google.com/file/d/1fkZyVKtzvr-DsR1LArDdQwip9Xo3wVl6/preview"
+                class="animate-on-scroll"
+                allow="autoplay; fullscreen"
+                allowfullscreen
+                loading="lazy"
+                onload="this.parentElement.classList.add('loaded');">
+            </iframe>
+            </div>
                 <p class="text-center animate-on-scroll tabbed">
              În concluzie, Singapore este un stat mic ca suprafață, dar mare ca performanță. Este un oraș-stat modern, cu o economie puternică, infrastructură de top și politici de planificare urbană inteligente.
 
@@ -1121,7 +1152,7 @@ Totodată, există reglementări stricte privind ordinea publică și mass-media
             const navMenu = document.getElementById('nav-menu');
             const body = document.body;
 
-            // --- 1. Landing Card Logic ---
+
             continueBtn.addEventListener('click', () => {
                 landingCard.classList.add('fade-out');
                 setTimeout(() => {
@@ -1129,7 +1160,7 @@ Totodată, există reglementări stricte privind ordinea publică și mass-media
                 }, 500);
             });
 
-            // --- 2. Theme Toggle Logic ---
+
             const currentTheme = localStorage.getItem('theme') || 'dark';
             if (currentTheme === 'light') {
                 body.setAttribute('data-theme', 'light');
@@ -1149,7 +1180,7 @@ Totodată, există reglementări stricte privind ordinea publică și mass-media
                 }
             });
 
-            // --- 3. Mobile Menu Toggle ---
+
             menuToggle.addEventListener('click', () => {
                 navMenu.classList.toggle('active');
                 const icon = menuToggle.querySelector('i');
@@ -1162,7 +1193,6 @@ Totodată, există reglementări stricte privind ordinea publică și mass-media
                 }
             });
 
-            // Close menu when clicking on a link
             const navLinks = document.querySelectorAll('.nav-menu a');
             navLinks.forEach(link => {
                 link.addEventListener('click', () => {
@@ -1173,7 +1203,7 @@ Totodată, există reglementări stricte privind ordinea publică și mass-media
                 });
             });
 
-            // --- 4. Scroll-triggered Animations ---
+
             const animatedElements = document.querySelectorAll('.animate-on-scroll');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
